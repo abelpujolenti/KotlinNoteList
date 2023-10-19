@@ -1,5 +1,3 @@
-package com.example.notelist.Notes
+package com.example.demokotlin.Notes
 
-import java.io.Serializable
-
-data class NoteData (val title: String, val body: String) : Serializable
+data class NoteData(val title: String, val body: String)

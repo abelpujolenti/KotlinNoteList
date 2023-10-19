@@ -22,23 +22,20 @@
                 android:textStyle="bold">
             </TextView>
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <ImageButton
                 android:id="@+id/add_new_note"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_add_icon_foreground">
-
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_add_icon_foreground"/>
 
         </RelativeLayout>
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/notes_table"
+            android:id="@+id/myHeroesTable"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/padding_normal">
+            android:layout_height="wrap_content">
 
         </androidx.recyclerview.widget.RecyclerView>
 
