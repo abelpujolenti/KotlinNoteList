@@ -1,46 +1,35 @@
 package com.example.notelist
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.notelist.ui.theme.NoteListTheme
+import androidx.recyclerview.widget.RecyclerView
+import com.example.notelist.R
 
 class MainActivity : ComponentActivity() {
+
+    val table by lazy {findViewById<RecyclerView>(R.id.notes_table)}
+    val notePreview by lazy {findViewById<Button>(R.id.note_list_cell)}
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            NoteListTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
-    }
-}
+        setContentView(R.layout.start_screen)
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        /*table.layoutManager = LinearLayoutManager(this);
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    NoteListTheme {
-        Greeting("Android")
+        table.adapter = NoteAdapter(NoteRepository.GetAllNotes())*/
+
+        /*notePreview.setOnClickListener{
+            //onClick()
+        }*/
+
     }
+
+    /*fun onClick(view: View){
+        val intent = Intent(this, SecondActivity::class.java).apply {
+            //putExtra("title_note", )
+            //putExtra("body_note", )
+        };
+        startActivity(intent)
+    }*/
 }
